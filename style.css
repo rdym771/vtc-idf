@@ -1,0 +1,84 @@
+/* Global styles: black background, light text, gold accents */
+:root{
+  --bg: #070707;
+  --card: #0f0f10;
+  --text: #f5f5f5;
+  --muted: #bdb6aa;
+  --gold: #caa36b;
+  --accent: rgba(202,163,107,0.08);
+  --container-width: 1100px;
+  --radius: 12px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--container-width);margin:0 auto;padding:20px}
+.site-header{border-bottom:1px solid rgba(255,255,255,0.03);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-size:20px;letter-spacing:1px;color:var(--gold);margin:0}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.main-nav a:hover{color:var(--text)}
+.btn-contact{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px}
+
+/* Hero */
+.hero{padding:40px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.hero h2{font-size:32px;margin:0 0 12px;color:var(--text)}
+.lead{color:var(--muted);font-size:16px;line-height:1.5}
+.hero-photo img{width:100%;height:auto;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+
+.cta-row{margin-top:18px}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+.btn-gold{background:linear-gradient(180deg,var(--gold),#b5874b);color:#070707}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);margin-left:10px;padding:10px 16px}
+
+.contact-list{list-style:none;padding:0;margin-top:16px;color:var(--muted)}
+.contact-list li{margin-bottom:6px}
+
+/* Features */
+.features{padding:30px 0}
+.cards{display:flex;gap:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.6);flex:1}
+.card h4{margin-top:0}
+
+.why{padding:18px 0}
+.why ul{color:var(--muted)}
+
+/* Services / Tarifs */
+.service-item{background:var(--card);padding:18px;border-radius:12px;margin-bottom:14px}
+.tarifs-table{width:100%;border-collapse:collapse;background:transparent}
+.tarifs-table th, .tarifs-table td{padding:12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+
+/* Contact page */
+.contact-page{padding:30px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card{background:var(--card);padding:18px;border-radius:12px}
+.contact-actions{margin-top:12px}
+
+.form label{display:block;margin-bottom:10px;color:var(--muted)}
+.form input, .form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#0a0a0a;color:var(--text);margin-top:6px}
+.form textarea{min-height:100px}
+.form button{margin-top:10px}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:20px 0;margin-top:40px}
+.footer-grid{display:flex;gap:20px;align-items:flex-start;justify-content:space-between}
+.attribution{text-align:center;color:var(--muted);margin-top:12px}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .cards{flex-direction:column}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{flex-direction:column;gap:8px}
+}
+
+/* small tweaks */
+a{color:var(--gold)}
+

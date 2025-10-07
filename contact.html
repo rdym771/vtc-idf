@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — VTC IDF</title>
+  <meta name="description" content="Contactez VTC IDF pour réserver votre chauffeur privé en Île-de-France.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">VTC IDF</h1>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="contact.html" class="btn-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <h2>Contact & Réservation</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Coordonnées</h3>
+        <p>Adresse : Melun, Seine-et-Marne (77) — Déplacements dans toute l'Île-de-France</p>
+        <p>Téléphone : <a href="tel:0762261859">0762261859</a></p>
+        <p>WhatsApp : <a href="https://wa.me/33762261859" target="_blank" rel="noopener">WhatsApp</a></p>
+        <p>Email : <a href="mailto:jsp@gmail.com">jsp@gmail.com</a></p>
+        <div class="contact-actions">
+          <a href="tel:0762261859" class="btn btn-gold">📞 Appeler</a>
+          <a href="https://wa.me/33762261859" target="_blank" rel="noopener" class="btn btn-outline">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Formulaire de réservation</h3>
+        <!-- Remplace FORMSPREE_ID par ton identifiant Formspree (exemple : mleqbjzy) -->
+        <form action="https://formspree.io/f/FORMSPREE_ID" method="POST" class="form">
+          <label>Nom complet<input type="text" name="name" required></label>
+          <label>Téléphone<input type="tel" name="phone" required></label>
+          <label>Email (optionnel)<input type="email" name="email"></label>
+          <label>Lieu de départ<input type="text" name="from" required></label>
+          <label>Destination<input type="text" name="to" required></label>
+          <label>Date et heure<input type="datetime-local" name="datetime" required></label>
+          <label>Message / Remarques<textarea name="message"></textarea></label>
+
+          <input type="hidden" name="_subject" value="Nouvelle réservation VTC IDF">
+          <input type="hidden" name="_next" value="/thank-you.html">
+
+          <button type="submit" class="btn btn-gold">Envoyer la demande</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>VTC IDF</h4>
+        <p>Seine-et-Marne (77) — Île-de-France</p>
+      </div>
+      <div>
+        <p>Téléphone : <a href="tel:0762261859">0762261859</a></p>
+        <p>Email : <a href="mailto:jsp@gmail.com">jsp@gmail.com</a></p>
+      </div>
+      <div>
+        <p><a href="index.html" class="btn btn-outline">Retour à l'accueil</a></p>
+      </div>
+    </div>
+    <div class="attribution">© <span id="year4"></span> VTC IDF — Tous droits réservés</div>
+  </footer>
+
+  <script>
+    document.getElementById('year4').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
